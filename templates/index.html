@@ -1,0 +1,93 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Viczenith TECHHUB</title>
+    <!-- <link rel="stylesheet" href="contact_style.css"> -->
+    <link rel="stylesheet" href="{% static '/fontawesome-free-6.1.2-web/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'https://cdsjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <a href="about"><h2 class="logo">VicZenith</h2></a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="about">ABOUT</a></li>
+                    <li><a href="services">SERVICES</a></li>
+                    <!-- <li><a href="#">DESIGN</a></li> -->
+                    <li><a href="contact">CONTACT</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a class="signout" href="login">Logout</a></li>
+                    {% else %}
+                    <li><a class="signout signout_login" href="login">Login/SignUp</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Click To Text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div>
+
+        <style>
+            .user_username span{
+                font-family: cursive;
+                color: darkgreen;
+            }
+            
+        </style>
+
+
+
+        <div class="content">
+            {% if user.is_authenticated %}
+            <h1 class="user_username">Hello <span>{{user.username}}</span></h1>
+            {% else %}
+            <h1>Welcome to ViczenithTECHHUB</h1>
+            {% endif %}
+            <p class="par">You are welcome to VicZenith TECHHUB. <br> A place for your free Web Design and Development Courses, <br> free tutorials, and certification.</p>
+            <h1>Web Design & <br><span>Development</span> <br>Course </h1>
+            <!-- <p class="par">You are welcome to VicZenith TECHHUB. <br> A place for your free Web Design and Development Courses, <br> free tutorials, and certification.</p> -->
+
+            
+            <div class="row">
+                <div class="buttons padd-15">
+                    <a href="contact" class="btn hire-me">Chat Us</a>
+                </div>
+            </div>
+
+            <!-- <button class="cn"> <a href="#">JOIN US</a></button> -->
+
+            <!-- <div class="form">
+                <h2>Login Here</h2>
+                <input type="email" name="email" placeholder="Enter your Email Here">
+                <input type="password" name="" placeholder="Enter Password Here">
+                <button class="btnn"><a href="#">Login</a></button>
+
+                <p class="link">Don't have an account<br>
+                <a href="#">Sign up</a> here</P>
+                <p class="liw">Log in with</p>
+                
+                <div class="icon">
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon> </a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon> </a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon> </a>
+                    <a href="#"><ion-icon name="logo-google"></ion-icon> </a>
+                    <a href="#"><ion-icon name="logo-skype"></ion-icon> </a>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+
+    <script src="https://www.unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+    
+</body>
+</html>

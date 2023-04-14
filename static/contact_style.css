@@ -1,0 +1,428 @@
+:root{
+    --bg-black-900: #f2f2fc;
+    --bg-black-100: #fdf9ff;
+    --bg-black-50: #e8efdc;
+    --text-black-900: #302e4d;
+    --text-black-700: #504e70;
+    --real-color: rgb(216, 145, 14);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    line-height: 1.5;
+    font-size: 16px;
+    background-color: var(--bg-black-900);
+}
+
+
+.padd-15{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container{
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+}
+
+.btn{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    background: var(--real-color);
+    color: white;
+    border-radius: 40px;
+    display: inline-block;
+    white-space: nowrap;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    color: var(--text-black-900);
+    border: 1px solid var(--bg-black-50);
+    font-weight: 900;
+    color: white;
+}
+
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+}
+
+
+.shadow-dark{
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+/* CONTACT */
+.contact-title{
+    color: var(--real-color);
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.contact-sub-title{
+    color: var(--text-black-900);
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 60px;
+}
+
+.contact .contact-info-item{
+    flex: 0 0 25%;
+    min-width: 25%;
+    text-align: center;
+    margin-bottom: 60px;
+   }
+
+.contact .contact-info-item .icon{
+    display: inline-block;
+}
+
+.contact .contact-info-item .icon .fa{
+    font-size: 18px;
+    color: var(--real-color);
+}
+
+.contact .contact-info-item h4{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+    margin: 15px 0 5px;
+}
+
+.contact .contact-info-item p{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black-700);
+    font-weight: 400;
+}
+
+.contact .contact-form{
+    flex: 0 0 100%;
+    min-width: 100%;
+}
+
+.contact .contact-form .col-6{
+    flex: 0 0 50%;
+    min-width: 50%;
+}
+
+.contact .contact-form .col-12{
+    flex: 0 0 100%;
+    min-width: 100%;
+}
+
+.contact .contact-form .form-item{
+    margin-bottom: 30px;
+}
+
+.contact .contact-form .form-item .form-control{
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    padding: 10px 25px;
+    font-size: 16px;
+    color: var(--text-black-700);
+    transition: all 0.3s ease;
+}
+
+.contact .contact-form .form-item .form-control:focus{
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.contact .contact-form .form-item textarea.form-control{
+    height: 140px;
+}
+
+.contact .contact-form .btn{
+    height: 50px;
+    padding: 0 50px;
+}
+
+
+/* *********SERVICES************* */
+
+.service .container{
+    padding-bottom: 40px;
+}
+
+.service .service-item{
+    margin-bottom: 30px;
+    flex: 0 0 33.33%;
+    min-width: 33.33%;
+}
+
+.service .service-item .service-item-inner{
+    background-color: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    padding: 30px 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.service .service-item .service-item-inner:hover{
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+
+.service .service-item .service-item-inner .icon{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+
+.service .service-item .service-item-inner .icon .fa{
+    font-size: 40px;
+    line-height: 60px;
+    color: var(--real-color);
+    transition: all 0.3s ease;
+}
+
+.service .service-item .service-item-inner:hover .icon{
+    
+    background-color: var(--real-color);
+}
+
+.service .service-item .service-item-inner:hover .icon .fa{
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.service .service-item .service-item-inner h4{
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.service .service-item .service-item-inner p{
+    font-size: 16px;
+    color: var(--text-black-700);
+    line-height: 25px;
+    
+}
+
+
+.service .service-item .service-item-inner:hover{
+    box-shadow: 0 0 20px solid rgba(48, 46, 77, 0.15);
+}
+
+
+/* ***********ABOUT************ */
+
+.about .about-content{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.about .about-content .about-text{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.about .about-content .about-text h3{
+    font-size: 24px;
+    margin-top: 15px;
+    font-weight: 700;
+    color: var(--text-black-900);
+}
+
+.about .about-content .about-text h3 span{
+    color: var(--real-color);
+}
+
+.about .about-content .about-text p{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black-700);
+}
+
+.about .about-content .personal-info{
+    flex: 0 0 60%;
+    max-width: 60%;
+    margin-top: 40px;
+}
+
+.about .about-content .personal-info .info-item{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.about .about-content .personal-info .info-item p{
+    font-weight: 600;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--text-black-900);
+    border-bottom: 1px solid var(--bg-black-50);
+}
+
+.about .about-content .personal-info .info-item p span{
+    font-weight: 400;
+    color: var(--text-black-700);
+    margin-left: 4px;
+    display: inline-block;
+}
+
+.about .about-content .personal-info .buttons{
+    margin-top: 30px;
+}
+
+.about .about-content .personal-info .buttons .btn{
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.about .about-content .skills{
+    flex: 0 0 40%;
+    max-width: 40%;
+    margin-top: 40px;
+}
+
+.about .about-content .skills .skill-item{
+    flex: 0 0 100%;
+    min-width: 100%;
+    margin-bottom: 40px;
+}
+
+.about .about-content .skills .skill-item h5{
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+}
+
+.about .about-content .skills .skill-item .progress{
+    background-color: var(--bg-black-50);
+    height: 7px; 
+    border-radius: 4px;
+    width: 100%;
+    position: relative;
+}
+
+.about .about-content .skills .skill-item .progress .progress-in{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 4px;
+    background-color: var(--real-color);
+}
+
+.about .about-content .skills .skill-item .skill-percent{
+    position: absolute;
+    right: 0;
+    color: var(--text-black-900);
+    top: -40px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.about .about-content .education, .experience{
+    flex: 0 0 50%;
+    min-width: 50%;
+    margin-top: 30px;
+}
+
+.about .about-content h3.title{
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: var(--text-black-900);
+}
+
+.about .about-content .timeline-box{
+    flex: 0 0 100%;
+    min-width: 100%;
+}
+
+.about .about-content .timeline{
+    background-color: var(--bg-black-100);
+    padding: 30px 15px;
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.about .about-content .timeline .timeline-item{
+    position: relative;
+    padding-left: 37px;
+    padding-bottom: 50px;
+}
+
+.about .about-content .timeline .timeline-item:last-child{
+    padding-bottom: 0;
+}
+
+.about .about-content .timeline .timeline-item::before{
+    content: '';
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: 7px;
+    top: 0;
+    background-color: var(--real-color);
+}
+
+.about .about-content .timeline .timeline-item .timeline-dot{
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--real-color);
+}
+
+.about .about-content .timeline .timeline-date{
+   font-weight: 400;
+   font-size: 14px;
+   margin-bottom: 12px;
+    color: var(--text-black-700);
+}
+
+.about .about-content .timeline .timeline-date .fa{
+    margin-right: 5px;
+}
+
+.about .about-content .timeline .timeline-title{
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    color: var(--text-black-900);
+}
+
+.about .about-content .timeline .timeline-text{
+    line-height: 25px;
+    font-size: 16px;
+    text-align: justify;
+    color: var(--text-black-700);
+}

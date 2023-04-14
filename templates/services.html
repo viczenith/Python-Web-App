@@ -1,0 +1,41 @@
+{% load static %}
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/fontawesome-free-6.1.2-web/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'https://cdsjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'contact_style.css' %}">
+    <title>Services</title>
+ </head>
+ <body>
+    
+ </body>
+ </html>
+ 
+ <!-- ---------------SERVICES SECTION-------------- -->
+   <section class="service section" id="services">
+    <div class="container">
+        <div class="row">
+            <div class="section-title padd-15">
+                <h2>Services</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            {% for service in services %}
+            <div class="service-item padd-15">
+                <div class="service-item-inner">
+                    <div class="icon">
+                        <i class="fa fa-mobile-alt"></i>
+                    </div>
+                    <h4>{{service.name}}</h4>
+                    <p>{{service.details}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

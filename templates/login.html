@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static 'fontawesome-free-6.1.2-web/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'https://cdsjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <title>Login or SignUp</title>
+</head>
+<body>
+    <div class="form">
+        <h2>Login Here</h2>
+
+        <style>
+            h3{
+                color: orangered;
+                font-style: italic;
+            }
+        </style>
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+
+        <form action="login" method="POST">
+            {% csrf_token %}
+        <input type="text" name="username" placeholder="Enter Username Here">
+        <input type="password" name="password" placeholder="Enter Password Here">
+        <button type="submit" class="btnn">Login</button>
+        </form>
+
+        <p class="link">Don't have an account<br>
+        <a href="signup">Sign up</a> here</P>
+        <p class="liw">Log in with</p>
+        
+        <div class="icon">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon> </a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon> </a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon> </a>
+            <a href="#"><ion-icon name="logo-google"></ion-icon> </a>
+            <a href="#"><ion-icon name="logo-skype"></ion-icon> </a>
+        </div>
+    </div>
+</body>
+</html>

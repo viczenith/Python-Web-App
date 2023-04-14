@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <link rel="stylesheet" href="{% static '/fontawesome-free-6.1.2-web/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'https://cdsjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'signup.css' %}">
+    <title>SignUp</title>
+</head>
+<body>
+    <div class="form">
+        <h2>SignUp Here</h2>
+        <style>
+            h5{
+                color: red;
+                font-style: italic;
+            }
+        </style>
+        {% for message in messages %}
+        <h5>{{message}}</h5>
+        {% endfor %}
+        <form action="signup" method="POST">
+            {% csrf_token %}
+        <input type="text" name="username" placeholder="username">
+        <input type="text" name="firstname" placeholder="firstname">
+        <input type="text" name="lastname" placeholder="lastname">
+        <input type="email" name="email" placeholder="email address">
+        <input type="password" name="password" placeholder="enter password">
+        <input type="password" name="password2" placeholder="re-enter password">
+        <button type="submit" class="btnn">SignUp</button>
+        </form>
+
+        <p class="link">Already have an account Click<br>
+        <a href="login">Sign In</a></P>
+        <p class="liw">Log in with</p>
+        
+        <div class="icon">
+            <a href="#"> <i class="fab fa-facebook"></i> </a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-google"></i></a>
+        </div>
+    </div>
+</body>
+</html>
