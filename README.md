@@ -1,2 +1,2 @@
 # Python-WebApp
-Python WebApp full Database control, User Authentication and Validation
+Fully functional Database control, User Authentication and Validation
